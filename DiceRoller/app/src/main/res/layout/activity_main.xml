@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mainActivityLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/blue_grey_600"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zybooks.diceroller.Controller.MainActivity">
+
+    <ImageView
+        android:id="@+id/dice1"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/dice_one"
+        android:src="@drawable/dice_1"
+        />
+
+    <ImageView
+        android:id="@+id/dice2"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/dice_one"
+        android:src="@drawable/dice_1"
+        />
+
+    <ImageView
+        android:id="@+id/dice3"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/dice_one"
+        android:src="@drawable/dice_1"
+         />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_see_through"
+            android:orientation="horizontal"
+            android:paddingVertical="29dp"
+            app:layout_constraintBaseline_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="TOTAL: "
+            android:textColor="@color/white_200"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/container"
+            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintTop_toTopOf="@+id/container" />
+
+        <TextView
+            android:id="@+id/totalSumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:fontFamily="sans-serif-black"
+            android:shadowColor="@color/white_200"
+            android:shadowDx="6"
+            android:shadowDy="8"
+            android:shadowRadius="2"
+            android:text="0"
+            android:textColor="@color/mustard"
+            android:textSize="100sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBottomOf="@id/totalTextView"
+            app:layout_constraintLeft_toRightOf="@+id/totalTextView" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginRight="8dp"
+            android:text="Won"
+            android:textColor="@color/white_200"
+            android:textSize="75sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBottomOf="@id/totalTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/totalSumTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
